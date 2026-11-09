@@ -1,6 +1,6 @@
 ---
 name: aminer-grant-application
-name_zh: 科研项目申报
+name_zh: 项目申报
 version: 1.0.2
 author: AMiner
 contact: report@aminer.cn

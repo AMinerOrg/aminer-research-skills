@@ -125,7 +125,7 @@
     },
     {
       "name": "aminer-grant-application",
-      "description": "科研项目申报全流程：申报要件提取、凝练科学问题、分节撰写申报书、查新以避免选题重复、模拟评审专家评审",
+      "description": "项目申报全流程：申报要件提取、凝练科学问题、分节撰写申报书、查新以避免选题重复、模拟评审专家评审",
       "source": "./skills/aminer-grant-application",
       "strict": false
     },
