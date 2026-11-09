@@ -1,8 +1,12 @@
 # Changelog
 
+## 0.5.3 — 2026-11-09
+
+- `paper_detail` now uses the multi-ID endpoint directly (no separate batch name); diagnostics report it as `paper_detail`.
+
 ## 0.5.2 — 2026-11-06
 
-- Enrich records still missing abstracts with one `paper_detail_batch` call instead of one `paper_detail` call per record. Billing is CNY 0.01 per returned paper (IDs not found are free); diagnostics record the requested IDs, the upper-bound estimate, and the billed fee.
+- Enrich records still missing abstracts with one multi-ID `paper_detail` call instead of one call per record. Billing is CNY 0.01 per returned paper (IDs not found are free); diagnostics record the requested IDs, the upper-bound estimate, and the billed fee.
 
 ## 0.5.1 — 2026-11-02
 

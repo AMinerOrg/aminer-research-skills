@@ -165,13 +165,12 @@ API_SPECS: dict[str, ApiSpec] = {
         any_of=("query", "topic_high", "title", "doi", "author_id", "org_id", "venue_ids"),
         note="Legacy. Use only for topic_high/middle/low OR-AND mode; otherwise call paper_qa_search_pro.",
     ),
-    "paper_detail": ApiSpec("GET", "/api/paper/detail", 0.01, fields={"id": _s()}, required=("id",)),
-    "paper_detail_batch": ApiSpec(
+    "paper_detail": ApiSpec(
         "POST", "/api/paper/detail/batch", 0.01,
         fields={"ids": _sl(maximum=100)},
         required=("ids",),
         per_item="ids",
-        note="Up to 100 IDs. CNY 0.01 per returned paper; IDs not found are free. Same fields as paper_detail.",
+        note="Up to 100 IDs per call. CNY 0.01 per returned paper; IDs not found are free.",
     ),
     "paper_relation": ApiSpec("GET", "/api/paper/relation", 0.10, fields={"id": _s()}, required=("id",)),
     "paper_list_by_keywords": ApiSpec(
@@ -333,6 +332,9 @@ def _validate_params(api_name: str, raw_params: Any) -> dict[str, Any]:
         raise ClientError("Parameters must be a JSON object")
 
     spec = API_SPECS[api_name]
+    if api_name == "paper_detail" and "id" in raw_params and "ids" not in raw_params:
+        # single-ID callers: {"id": "..."} -> {"ids": ["..."]}
+        raw_params = {**{k: v for k, v in raw_params.items() if k != "id"}, "ids": [raw_params["id"]]}
     unknown = sorted(set(raw_params) - spec.allowed)
     if unknown:
         raise ClientError(f"Unsupported parameter(s) for {api_name}: {', '.join(unknown)}")

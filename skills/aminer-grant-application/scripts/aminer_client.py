@@ -30,14 +30,14 @@ from typing import Any, Optional
 
 BASE_URL = "https://datacenter.aminer.cn/gateway/open_platform"
 SKILL_NAME = "aminer-grant-application"  # per-skill copy; only this line differs
-SKILL_VERSION = "1.0.1"
+SKILL_VERSION = "1.0.2"
 
 REQUEST_TIMEOUT_SECONDS = 30
 MAX_RETRIES = 3
 RETRYABLE_HTTP_STATUS = {408, 429, 500, 502, 503, 504}
 
 # Actions billed per returned item (unit price × len(data)); IDs not found are free
-PER_ITEM_ACTIONS = {"paper_detail_batch"}
+PER_ITEM_ACTIONS = {"paper_detail"}
 
 # action -> (HTTP method, path, unit price in CNY; 0 = free)
 ACTIONS: dict[str, tuple[str, str, float]] = {
@@ -46,8 +46,7 @@ ACTIONS: dict[str, tuple[str, str, float]] = {
     "paper_search_pro": ("GET", "/api/paper/search/pro", 0.01),
     "paper_qa_search": ("POST", "/api/paper/qa/search", 0.05),
     "paper_info": ("POST", "/api/paper/info", 0.0),
-    "paper_detail": ("GET", "/api/paper/detail", 0.01),
-    "paper_detail_batch": ("POST", "/api/paper/detail/batch", 0.01),  # ¥0.01 per returned paper, ids ≤ 100
+    "paper_detail": ("POST", "/api/paper/detail/batch", 0.01),  # ¥0.01 per returned paper, ids ≤ 100
     "paper_relation": ("GET", "/api/paper/relation", 0.10),
     # Scholar
     "person_search": ("POST", "/api/person/search", 0.0),
@@ -219,6 +218,8 @@ def main() -> int:
         return 2
 
     method, path, price = ACTIONS[args.action]
+    if args.action == "paper_detail" and "ids" not in params and params.get("id"):
+        params = {"ids": [params["id"]]}  # single-ID callers: {"id": "..."} -> {"ids": ["..."]}
     if method == "GET":
         result = _request(token, method, path, params=params)
     else:
