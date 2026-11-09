@@ -94,9 +94,9 @@
       "strict": false
     },
     {
-      "name": "aminer-topic-advisor-selection",
-      "description": "科研选题与导师选择：评估方向的竞争程度、对选题进行查新、按代表作分层；院系枚举、逐位导师建档对比与同名消歧（person_detail ¥1.00/次，先用免费接口收敛）",
-      "source": "./skills/aminer-topic-advisor-selection",
+      "name": "aminer-paper-writing",
+      "description": "论文写作与返修全流程：从零撰写并系统配引、自有稿件定点修改、投稿前模拟审稿、审稿意见逐条返修与回复信；选题空白核查、引用占位符填充与期刊适配",
+      "source": "./skills/aminer-paper-writing",
       "strict": false
     },
     {
@@ -106,27 +106,27 @@
       "strict": false
     },
     {
-      "name": "aminer-paper-writing",
-      "description": "论文写作与返修全流程：从零撰写并系统配引、自有稿件定点修改、投稿前模拟审稿、审稿意见逐条返修与回复信；选题空白核查、引用占位符填充与期刊适配",
-      "source": "./skills/aminer-paper-writing",
-      "strict": false
-    },
-    {
       "name": "aminer-experiment-to-paper",
       "description": "实验分析与结果撰写：代码与实验排障、方法出处核实、结果与文献对照、先例检索，支撑实验结果的论文写作与复现",
       "source": "./skills/aminer-experiment-to-paper",
       "strict": false
     },
     {
-      "name": "aminer-thesis-writing",
-      "description": "学位论文全流程：开题（文献调研/创新点对标/查新）、逐节撰写、导师/评审/盲审意见逐条落实、引文核验、格式合规、答辩与中期材料",
-      "source": "./skills/aminer-thesis-writing",
-      "strict": false
-    },
-    {
       "name": "aminer-grant-application",
       "description": "项目申报全流程：申报要件提取、凝练科学问题、分节撰写申报书、查新以避免选题重复、模拟评审专家评审",
       "source": "./skills/aminer-grant-application",
+      "strict": false
+    },
+    {
+      "name": "aminer-topic-advisor-selection",
+      "description": "科研选题与导师选择：评估方向的竞争程度、对选题进行查新、按代表作分层；院系枚举、逐位导师建档对比与同名消歧（person_detail ¥1.00/次，先用免费接口收敛）",
+      "source": "./skills/aminer-topic-advisor-selection",
+      "strict": false
+    },
+    {
+      "name": "aminer-thesis-writing",
+      "description": "学位论文全流程：开题（文献调研/创新点对标/查新）、逐节撰写、导师/评审/盲审意见逐条落实、引文核验、格式合规、答辩与中期材料",
+      "source": "./skills/aminer-thesis-writing",
       "strict": false
     },
     {
