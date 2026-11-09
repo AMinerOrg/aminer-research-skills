@@ -1,0 +1,47 @@
+{
+  "skill_name": "related-work-audit",
+  "evals": [
+    {
+      "id": 1,
+      "prompt": "Audit this PDF for potentially missing Related Work. The review year is 2024; include the permitted one-year publication grace.",
+      "expected_output": "Use related-work-audit with the supplied PDF, --review-year 2024 and --publication-year-grace 1. Keep bibliography-matched papers out of missing-work recommendations, label the widened year window, and do not invent findings before running the audit.",
+      "files": [],
+      "expectations": [
+        "Selects related-work-audit for manuscript-specific Related Work coverage",
+        "Keeps the explicit 2024 plus one-year-grace publication window",
+        "Does not claim audit results without the PDF or an executed report"
+      ]
+    },
+    {
+      "id": 2,
+      "prompt": "For AMiner paper 0123456789abcdef01234567, find important related work the paper may have missed as of 2025. Include task, method, dataset, and evaluation precedents where supported.",
+      "expected_output": "Route to related-work-audit with the supplied pub_id and review year. Distinguish core same-domain works from evidence-grounded extended reading; verify publication eligibility and bibliography status before recommending any candidate.",
+      "files": [],
+      "expectations": [
+        "Uses the supplied AMiner pub_id and cutoff year",
+        "Treats cross-domain reading as evidence-grounded discussion, not automatically a direct comparison",
+        "Does not present already-cited work as missing"
+      ]
+    },
+    {
+      "id": 3,
+      "prompt": "Which direct experimental baselines should this paper add, and which ones are runnable on its exact benchmark?",
+      "expected_output": "Use baseline-finder for a direct experimental-baseline audit, not related-work-audit, and request the manuscript input if absent.",
+      "files": [],
+      "expectations": [
+        "Routes direct baseline comparisons to baseline-finder",
+        "Does not turn a Related Work recommendation into a verified runnable baseline"
+      ]
+    },
+    {
+      "id": 4,
+      "prompt": "List later papers that cite this work and call them missing related work from its original submission.",
+      "expected_output": "Do not infer missing prior work from later citing papers. The Skill's public paper/relation path provides backward references cited by a verified seed, not forward citations.",
+      "files": [],
+      "expectations": [
+        "Distinguishes backward references from later forward citations",
+        "Does not label post-submission publications as omitted at the original review date"
+      ]
+    }
+  ]
+}

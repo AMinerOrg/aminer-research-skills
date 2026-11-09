@@ -92,6 +92,7 @@ ln -s ~/ai-skills/aminer-open-skill/skills/aminer-free-academic ~/.codex/skills/
 | `deep-research` | matplotlib（报告插图） |
 | `sota-finder` | openpyxl（导出 Excel） |
 | `baseline-finder` | httpx、openai、pypdf |
+| `related-work-audit` | httpx、openai、pypdf |
 
 7 个科研工作流技能（`aminer-topic-advisor-selection` / `aminer-paper-deep-reading` / `aminer-paper-writing` / `aminer-experiment-to-paper` / `aminer-thesis-writing` / `aminer-grant-application` / `aminer-patent-tech-intelligence`）只依赖标准库，无需额外安装。
 
@@ -99,7 +100,7 @@ ln -s ~/ai-skills/aminer-open-skill/skills/aminer-free-academic ~/.codex/skills/
 python3 -m pip install -r skills/<skill-name>/requirements.txt
 ```
 
-`baseline-finder` 也提供独立 CLI；按其 [SKILL.md](skills/baseline-finder/SKILL.md) 将技能目录本身安装到隔离环境，可同时安装依赖并注册 `baseline-finder` 命令。
+`baseline-finder` 和 `related-work-audit` 均提供独立 CLI；按各自的 [Baseline SKILL.md](skills/baseline-finder/SKILL.md) 与 [RW SKILL.md](skills/related-work-audit/SKILL.md) 安装技能目录，可同时安装依赖并注册命令。
 
 `structured-reference-audit` 还需要可访问的 [GROBID](https://github.com/kermitt2/grobid) 服务，或已有的 TEI 文件。
 

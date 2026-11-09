@@ -92,6 +92,7 @@ Skill scripts need `python3`. Most skills use only the standard library; the fol
 | `deep-research` | matplotlib (report figures) |
 | `sota-finder` | openpyxl (Excel export) |
 | `baseline-finder` | httpx, openai, pypdf |
+| `related-work-audit` | httpx, openai, pypdf |
 
 The seven research-workflow skills (`aminer-topic-advisor-selection` / `aminer-paper-deep-reading` / `aminer-paper-writing` / `aminer-experiment-to-paper` / `aminer-thesis-writing` / `aminer-grant-application` / `aminer-patent-tech-intelligence`) depend on the standard library only — no extra installation needed.
 
@@ -99,7 +100,7 @@ The seven research-workflow skills (`aminer-topic-advisor-selection` / `aminer-p
 python3 -m pip install -r skills/<skill-name>/requirements.txt
 ```
 
-`baseline-finder` also provides a standalone CLI. Install the skill directory itself in an isolated environment as described in its [SKILL.md](skills/baseline-finder/SKILL.md); this installs dependencies and registers the `baseline-finder` command.
+`baseline-finder` and `related-work-audit` both provide standalone CLIs. Install their directories as described in the [Baseline SKILL.md](skills/baseline-finder/SKILL.md) and [RW SKILL.md](skills/related-work-audit/SKILL.md); this installs dependencies and registers their commands.
 
 `structured-reference-audit` also needs a reachable [GROBID](https://github.com/kermitt2/grobid) service or existing TEI files.
 

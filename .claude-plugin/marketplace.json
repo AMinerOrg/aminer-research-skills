@@ -52,6 +52,12 @@
       "strict": false
     },
     {
+      "name": "related-work-audit",
+      "description": "Audit a manuscript for potentially missing related work using AMiner retrieval and bibliography evidence",
+      "source": "./skills/related-work-audit",
+      "strict": false
+    },
+    {
       "name": "sota-finder",
       "description": "检索近期或历史 SOTA，区分可比范围并生成带来源的 Leaderboard、完整报告、Excel 和结构化证据",
       "source": "./skills/sota-finder",

@@ -3,7 +3,7 @@
   <p>
     <a href="LICENSE"><img alt="License" src="https://img.shields.io/badge/license-MIT-2ea44f"></a>
     <a href=".claude-plugin/marketplace.json"><img alt="Version" src="https://img.shields.io/badge/version-1.15.0-0969da"></a>
-    <a href="SKILLS.en.md"><img alt="Skills" src="https://img.shields.io/badge/skills-21-0ea5e9"></a>
+    <a href="SKILLS.en.md"><img alt="Skills" src="https://img.shields.io/badge/skills-22-0ea5e9"></a>
     <a href="INSTALL.en.md"><img alt="Install" src="https://img.shields.io/badge/install-Claude%20Code%20%7C%20Codex%20%7C%20OpenClaw-111827"></a>
     <a href="README.md"><img alt="Language" src="https://img.shields.io/badge/language-English%20%7C%20中文-1f6feb"></a>
   </p>
@@ -43,7 +43,7 @@ The following 7 skills can be used directly in the AMiner web app: click the but
 
 ## Local skills
 
-The other 14 skills run in a local agent (Claude Code, Codex, OpenClaw, and others); see [Quick install](#quick-install) below. Follow the link after each category for full details and example prompts.
+The other 15 skills run in a local agent (Claude Code, Codex, OpenClaw, and others); see [Quick install](#quick-install) below. Follow the link after each category for full details and example prompts.
 
 **Search and discovery** · [Examples and details →](SKILLS.en.md#search-and-discovery)
 
@@ -64,9 +64,10 @@ The other 14 skills run in a local agent (Claude Code, Codex, OpenClaw, and othe
 
 - [`deep-research`](skills/deep-research/SKILL.md): Write cited research reports with a traceable evidence ledger
 
-**Paper experiment checks** · [Examples and details →](SKILLS.en.md#paper-experiment-checks)
+**Manuscript coverage checks** · [Examples and details →](SKILLS.en.md#manuscript-coverage-checks)
 
 - [`baseline-finder`](skills/baseline-finder/SKILL.md): Check whether a paper misses baselines it should compare against
+- [`related-work-audit`](skills/related-work-audit/SKILL.md): Check a paper for potentially missing related work
 
 **Citation checking** · [Examples and details →](SKILLS.en.md#citation-checking)
 

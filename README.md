@@ -3,7 +3,7 @@
   <p>
     <a href="LICENSE"><img alt="License" src="https://img.shields.io/badge/license-MIT-2ea44f"></a>
     <a href=".claude-plugin/marketplace.json"><img alt="Version" src="https://img.shields.io/badge/version-1.15.0-0969da"></a>
-    <a href="SKILLS.md"><img alt="Skills" src="https://img.shields.io/badge/skills-21-0ea5e9"></a>
+    <a href="SKILLS.md"><img alt="Skills" src="https://img.shields.io/badge/skills-22-0ea5e9"></a>
     <a href="INSTALL.md"><img alt="Install" src="https://img.shields.io/badge/install-Claude%20Code%20%7C%20Codex%20%7C%20OpenClaw-111827"></a>
     <a href="README.en.md"><img alt="Language" src="https://img.shields.io/badge/language-中文%20%7C%20English-1f6feb"></a>
   </p>
@@ -43,7 +43,7 @@
 
 ## 本地技能
 
-其余 14 个技能安装到本地 Agent（Claude Code、Codex、OpenClaw 等）使用，安装见下方[快速安装](#快速安装)。点击类别后的链接查看完整说明与示例提示词。
+其余 15 个技能安装到本地 Agent（Claude Code、Codex、OpenClaw 等）使用，安装见下方[快速安装](#快速安装)。点击类别后的链接查看完整说明与示例提示词。
 
 **检索与发现** · [示例与详情 →](SKILLS.md#检索与发现)
 
@@ -64,9 +64,10 @@
 
 - [`deep-research`](skills/deep-research/SKILL.zh.md)：撰写带引用、证据可追溯的调研报告
 
-**论文实验核查** · [示例与详情 →](SKILLS.md#论文实验核查)
+**稿件覆盖核查** · [示例与详情 →](SKILLS.md#稿件覆盖核查)
 
 - [`baseline-finder`](skills/baseline-finder/SKILL.md)：核查论文是否遗漏应当比较的实验基线
+- [`related-work-audit`](skills/related-work-audit/SKILL.md)：核查论文可能遗漏的重要相关工作
 
 **引用核查** · [示例与详情 →](SKILLS.md#引用核查)
 
