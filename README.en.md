@@ -1,5 +1,5 @@
 <div align="center">
-  <h1>AMiner Open Skills</h1>
+  <h1>AMiner Research Skills</h1>
   <p>
     <a href="LICENSE"><img alt="License" src="https://img.shields.io/badge/license-MIT-2ea44f"></a>
     <a href=".claude-plugin/marketplace.json"><img alt="Version" src="https://img.shields.io/badge/version-1.15.0-0969da"></a>
@@ -16,7 +16,7 @@
     · <a href="README.md">中文</a>
   </p>
   <p>
-    <img src="assets/readme-banner-en-v3.png" alt="AMiner Open Skills: research skills powered by real academic data" width="100%">
+    <img src="assets/readme-banner-en-v3.png" alt="AMiner Research Skills: research skills powered by real academic data" width="100%">
   </p>
   <p>
     <b>AMiner web app: Smart Search, AI Reading, Res Labs, AI2000 and more built in — visit <a href="https://www.aminer.cn">https://www.aminer.cn</a></b>

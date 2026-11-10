@@ -1,7 +1,7 @@
 """Self-contained AMiner backward-reference expansion for Related Work Audit.
 
 The standalone Skill deliberately owns this transport.  It does not import the
-AMiner open-skill client, repository Core, or the Demo server.
+AMiner research-skills client, repository Core, or the Demo server.
 """
 
 from __future__ import annotations

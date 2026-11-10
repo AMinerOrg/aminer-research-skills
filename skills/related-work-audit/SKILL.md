@@ -2,7 +2,7 @@
 name: related-work-audit
 name_zh: 相关工作覆盖核查
 description: Audit a PDF or AMiner-indexed manuscript for potentially missing related work using year-bounded AMiner search and optional verified backward-reference evidence. Use for related-work coverage questions; do not use for experimental-baseline checks, definitive novelty claims, or acceptance prediction.
-homepage: https://github.com/AMinerOrg/aminer-open-skill/tree/main/skills/related-work-audit
+homepage: https://github.com/AMinerOrg/aminer-research-skills/tree/main/skills/related-work-audit
 metadata:
   version: "0.4.9.dev23"
 ---

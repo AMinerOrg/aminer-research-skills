@@ -1,7 +1,7 @@
 """AMiner Open Platform search and safe manuscript identity resolution.
 
 The Skill owns this small client so it stays installable without the AMiner
-open-skill repository.  Only documented Open Platform endpoints are used.
+research-skills repository.  Only documented Open Platform endpoints are used.
 """
 
 from __future__ import annotations
