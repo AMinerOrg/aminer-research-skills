@@ -2,7 +2,7 @@
 
 [← 返回 README](README.md) · [English](SKILLS.en.md)
 
-当前 `skills/` 下包含以下 21 个可触发技能。点击技能名查看完整技能定义。前 7 个为科研工作流技能，在 AMiner 网页版在线可用；其余面向本地 Agent，按科研阶段分组。
+当前 `skills/` 下包含以下 22 个可触发技能。点击技能名查看完整技能定义。前 7 个为科研工作流技能，在 AMiner 网页版在线可用；其余面向本地 Agent，按科研阶段分组。
 
 **目录**：
 
@@ -10,7 +10,7 @@
 - [检索与发现](#检索与发现)
 - [阅读与整理](#阅读与整理)
 - [调研报告](#调研报告)
-- [论文实验核查](#论文实验核查)
+- [稿件覆盖核查](#稿件覆盖核查)
 - [引用核查](#引用核查)
 - [易混技能如何选择](#易混技能如何选择)
 - [设计原则](#设计原则)
@@ -82,15 +82,17 @@
 
 - 撰写带引用的研究报告（`deep-research`）：调研中国大模型行业，撰写一份带引用的报告，每个论断都有证据台账支撑。
 
-## 论文实验核查
+## 稿件覆盖核查
 
 | 技能 | 状态 | 用途 | 触发词 | Token |
 | --- | --- | --- | --- | --- |
 | [`baseline-finder`](skills/baseline-finder/SKILL.md) | Preview | 对照实验与引用证据，核查论文是否遗漏了应当比较的实验基线 | 「还应比较哪些实验基线」 | 需要模型 API Key 和 AMiner Token；部分 API 计费；PDF 模式需 GROBID |
+| [`related-work-audit`](skills/related-work-audit/SKILL.md) | Preview | 结合 AMiner 检索和稿件书目，核查可能遗漏的相关工作 | 「这篇论文还漏了哪些重要 Related Work」 | 需要模型 API Key 和 AMiner Token；部分 API 计费；PDF 模式需 GROBID |
 
 **示例提示词**：
 
 - 检查实验基线覆盖（`baseline-finder`）：检查这篇论文的实验部分是否可能遗漏直接实验基线，并区分有证据支持的比较项与待作者核实的候选。
+- 核查相关工作覆盖（`related-work-audit`）：检查这篇论文可能遗漏的方法、任务、数据集或评测先例，并说明与稿件的具体关系。
 
 ## 引用核查
 
@@ -119,6 +121,7 @@
 | 判断引用内容是否忠于被引原文 | `citation-faithfulness` | `pdf-citation-verifier` |
 | 追溯论点来源、引用意图，生成引用图 | `paper-source-trace` | `citation-faithfulness` |
 | 核查论文是否可能遗漏直接实验基线 | `baseline-finder` | `aminer-deep-search`（它收集候选论文，不评估基线覆盖） |
+| 核查特定稿件可能遗漏的相关工作 | `related-work-audit` | `aminer-deep-search`（它收集候选论文，不核查稿件书目） |
 | 将 PDF 转换为全文 Markdown | `aminer-pdf-ocr` | `aminer-exp-extraction`（输入已是 Markdown 时才用） |
 
 ## 设计原则

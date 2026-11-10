@@ -1,0 +1,28 @@
+[build-system]
+requires = ["setuptools>=69"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "related-work-audit"
+version = "0.4.9.dev23"
+description = "Standalone, time-bounded related-work coverage audit for PDF or AMiner manuscripts"
+readme = "SKILL.md"
+requires-python = ">=3.10"
+dependencies = [
+  "httpx>=0.27.0",
+  "openai>=1.50.0",
+  "pypdf>=4.3.0",
+]
+
+[project.optional-dependencies]
+test = ["pytest>=8.0"]
+
+[project.scripts]
+related-work-audit = "related_work_audit.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+include = ["related_work_audit*"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]

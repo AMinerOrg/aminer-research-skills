@@ -1,0 +1,4 @@
+interface:
+  display_name: "Related Work Audit"
+  short_description: "Audit potentially missing related work"
+  default_prompt: "Use $related-work-audit to audit this paper for potentially missing related work."

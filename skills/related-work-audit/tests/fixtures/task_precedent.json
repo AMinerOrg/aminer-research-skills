@@ -1,0 +1,116 @@
+{
+  "local_title": "LONGMEMEVAL: BENCHMARKING CHAT ASSIST-ANTS ON LONG-TERM INTERACTIVE MEMORY",
+  "profile": {
+    "domain_terms": [
+      "long-term memory chat assistants",
+      "memory-augmented conversational agents",
+      "personalized LLM assistants",
+      "user-assistant chat histories",
+      "LLM-based chat assistants"
+    ],
+    "task_terms": [
+      "long-term interactive memory benchmark",
+      "multi-session question answering",
+      "temporal reasoning dialogue",
+      "knowledge update tracking",
+      "abstention unanswerable questions"
+    ],
+    "mechanism_terms": [
+      "session decomposition memory granularity",
+      "fact-augmented key expansion",
+      "time-aware query expansion",
+      "document expansion indexing",
+      "chain-of-note reading",
+      "structured JSON prompt format",
+      "retrieval-augmented generation memory"
+    ],
+    "data_protocol_terms": [
+      "needle-in-a-haystack test",
+      "self-chat simulated dialogues",
+      "LLM-as-judge evaluation",
+      "Recall@k NDCG@k",
+      "LLM-simulated human-edited sessions"
+    ]
+  },
+  "candidate": {
+    "aminer_pub_id": "5b8c9f4a17c44af36f8b6f6b",
+    "title": "CoQA: A Conversational Question Answering Challenge",
+    "authors": [
+      "Siva Reddy",
+      "Danqi Chen",
+      "Christopher D. Manning"
+    ],
+    "published": "2019",
+    "year": 2019,
+    "venue": "TRANSACTIONS OF THE ASSOCIATION FOR COMPUTATIONAL LINGUISTICS",
+    "venue_id": "5ea565e6edb6e7d53c03a9e3",
+    "date_precision": "year",
+    "summary": "Humans gather information through conversations involving a series of interconnected questions and answers. For machines to assist in information gathering, it is therefore essential to enable them to answer conversational questions. We introduce CoQA, a novel dataset for building Conversational Question Answering systems. Our dataset contains 127k questions with answers,...",
+    "source": "AMiner Open Platform paper/relation + paper_info",
+    "url": "https://www.aminer.cn/pub/5b8c9f4a17c44af36f8b6f6b",
+    "query": "References of Perltqa: A personal long-term memory dataset for memory classification, retrieval, and synthesis in question answering",
+    "retrieval_role": "reference_neighbor",
+    "relation_role": "reference_neighbor",
+    "query_role": "reference_neighbor",
+    "relation_evidence": {
+      "direction": "seed_cites_candidate",
+      "seed_pub_id": "65dd4f8013fb2c6cf66fa04c",
+      "seed_title": "Perltqa: A personal long-term memory dataset for memory classification, retrieval, and synthesis in question answering",
+      "candidate_pub_id": "5b8c9f4a17c44af36f8b6f6b",
+      "manuscript_cites_seed": true,
+      "depth_from_seed": 1
+    },
+    "cutoff_status": "admissible_year_before_cutoff",
+    "time_admissibility": "admissible",
+    "retrieval_record_index": 4,
+    "relevance_score": "6",
+    "has_distinctive_title_overlap": "true",
+    "facet_alignment": {
+      "profile_available": true,
+      "domain_required": true,
+      "domain_aligned": false,
+      "task_domain_fit": false,
+      "task_aligned": true,
+      "mechanism_aligned": false,
+      "data_protocol_aligned": false,
+      "aligned_axes": [
+        "task"
+      ],
+      "matched_profile_terms": {
+        "domain_terms": [],
+        "task_terms": [
+          "multi-session question answering"
+        ],
+        "mechanism_terms": [],
+        "data_protocol_terms": []
+      },
+      "local_citation_supported": false,
+      "named_work_query": false,
+      "publication_fit": false,
+      "cross_domain_task": true,
+      "mechanism_only_cross_domain": true,
+      "score": 6
+    },
+    "facet_alignment_score": "6",
+    "coherent_domain_score": 0,
+    "missing_status": "uncited"
+  },
+  "source_backed_choice": {
+    "candidate_id": "R1",
+    "relevance": "medium",
+    "relation_scope": "cross_domain_transfer",
+    "comparison_role": "task_precedent",
+    "reason": "The candidate introduces a conversational question-answering dataset. It can contextualize the manuscript's question-answering task over user-AI dialogue histories; its supplied abstract does not establish long-term memory evaluation.",
+    "transfer": {
+      "basis": "task",
+      "manuscript_facet_id": "T2",
+      "manuscript_facet": "multi-session question answering",
+      "manuscript_quote": "Each question requires recalling information hidden within one or more multi-turn task-oriented user-AI dialogues that are LLM-simulated and human-edited.",
+      "candidate_quote": "We introduce CoQA, a novel dataset for building Conversational Question Answering systems.",
+      "explanation": "The two supplied texts share question answering in conversational settings. The candidate can inform the task and dataset lineage discussion without claiming it tests the full memory abilities of this manuscript.",
+      "limitation": "The supplied candidate abstract does not establish long-term user-assistant memory evaluation, so it cannot support a direct benchmark comparison on those abilities."
+    }
+  },
+  "source_backed_choice_provenance": "New offline source-based assessment for regression, not the original GLM reply and not a new generation run.",
+  "manuscript_context": "Each question requires recalling information hidden within one or more multi-turn task-oriented user-AI dialogues that are LLM-simulated and human-edited."
+}

@@ -2,7 +2,7 @@
 
 [← Back to README](README.en.md) · [中文](SKILLS.md)
 
-`skills/` currently contains the following 21 triggerable skills. Click a skill name for the full skill definition. The first 7 are research workflow skills, available online in the AMiner web app; the rest target local agents and are grouped by research stage.
+`skills/` currently contains the following 22 triggerable skills. Click a skill name for the full skill definition. The first 7 are research workflow skills, available online in the AMiner web app; the rest target local agents and are grouped by research stage.
 
 **Contents**:
 
@@ -10,7 +10,7 @@
 - [Search and discovery](#search-and-discovery)
 - [Reading and organizing](#reading-and-organizing)
 - [Research reports](#research-reports)
-- [Paper experiment checks](#paper-experiment-checks)
+- [Manuscript coverage checks](#manuscript-coverage-checks)
 - [Citation checking](#citation-checking)
 - [Choosing between similar skills](#choosing-between-similar-skills)
 - [Design principles](#design-principles)
@@ -82,15 +82,17 @@
 
 - Produce a sourced research report (`deep-research`): Research the Chinese LLM industry and write a cited report with an evidence ledger backing every claim.
 
-## Paper experiment checks
+## Manuscript coverage checks
 
 | Skill | Status | Purpose | Triggers | Token |
 | --- | --- | --- | --- | --- |
 | [`baseline-finder`](skills/baseline-finder/SKILL.md) | Preview | Check a paper's experiments and citations against each other to find baselines it should have compared but didn't | "what baselines may be missing" | Model API key and AMiner token required; some API calls billed; GROBID for PDF mode |
+| [`related-work-audit`](skills/related-work-audit/SKILL.md) | Preview | Check a manuscript and its bibliography for potentially missing related work using AMiner evidence | "which important related work may be missing" | Model API key and AMiner token required; some API calls billed; GROBID for PDF mode |
 
 **Example prompts**:
 
 - Check experimental baseline coverage (`baseline-finder`): Check whether this paper may be missing direct experimental baselines, and separate evidence-backed comparisons from leads that need author verification.
+- Check related-work coverage (`related-work-audit`): Check a paper for missing task, method, dataset, or evaluation precedents and explain each manuscript-specific relationship.
 
 ## Citation checking
 
@@ -119,6 +121,7 @@
 | Whether a citation faithfully represents the cited source | `citation-faithfulness` | `pdf-citation-verifier` |
 | Tracing claims to sources and citation intent, with a citation map | `paper-source-trace` | `citation-faithfulness` |
 | Audit potentially missing direct experimental baselines | `baseline-finder` | `aminer-deep-search` (it gathers candidate papers; it does not assess baseline coverage) |
+| Audit potentially missing related work in a specific manuscript | `related-work-audit` | `aminer-deep-search` (it gathers papers; it does not compare them with the manuscript bibliography) |
 | Convert a PDF to full-text Markdown | `aminer-pdf-ocr` | `aminer-exp-extraction` (only when the input is already Markdown) |
 
 ## Design principles
