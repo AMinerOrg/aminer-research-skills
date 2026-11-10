@@ -8,7 +8,7 @@ description: >
   [Activation] Use when the user pastes a red-header notice / guideline entry / official format template and asks to extract application requirements; asks "how do I distill the scientific question" or "my research base is X but I want to write Y"; pastes a newly issued policy document to pick a direction; says "check the already-funded projects so I don't collide"; demands "review my proposal as the review expert panel" with both-sides argumentation; asks to "find literature supporting this sentence" or to calibrate text against literature data; says "limit to N words" or "do you still remember".
   [Scenarios] Full-pipeline executor for grant/funding applications — requirements extraction, direction picking, distilling the scientific question (transfer mode / constraint mode / three-tier), section-by-section drafting with pasted-section iteration, sentence-level evidence pairing and data calibration, overlap check, multi-role simulated review, and peripheral fixed-form deliverables such as budgets / awards / duty reports.
   [Routing] Pasted-paragraph citation pairing, word-count compression, and data calibration inside the application context stay in this skill — never dispatched out as generic revision; generic iterations of the user's own academic manuscripts outside the application context go to aminer-paper-writing; reviewer-perspective simulation for journal manuscripts goes to aminer-paper-writing; when the direction is not yet set, route upstream to aminer-topic-advisor-selection first.
-homepage: https://github.com/AMinerOrg/aminer-open-skill/tree/main/skills/aminer-grant-application
+homepage: https://github.com/AMinerOrg/aminer-research-skills/tree/main/skills/aminer-grant-application
 metadata:
   {
     "openclaw":

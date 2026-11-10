@@ -18,7 +18,7 @@ description: >
   only — no extra LLM configuration is needed.
   Supports structured constraints (year range, author, institution, venue, language, exclusion
   terms, citation range) and multiple ranking goals (latest, relevance, impact, classic+latest).
-homepage: https://github.com/AMinerOrg/aminer-open-skill/tree/main/skills/aminer-deep-search
+homepage: https://github.com/AMinerOrg/aminer-research-skills/tree/main/skills/aminer-deep-search
 metadata:
   {
     "openclaw":

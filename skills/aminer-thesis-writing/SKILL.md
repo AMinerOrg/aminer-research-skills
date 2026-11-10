@@ -8,7 +8,7 @@ description: >
   [Activation] The degree-thesis production line, from the proposal gate to the defense: "how do I write the proposal report", "can my topic pass the proposal review", "this is the school template, fill it in for me", "proposal deadline on the 15th", "make a proposal-defense PPT set", "now write section 3.2" + pasted table of contents, "implement the advisor's comments item by item", "find two papers from the last two years to support this sentence", "you are a blind-review expert", "what to say on each defense PPT slide", "check the whole thesis against the school format", or a pasted annotated manuscript / numbered comment list.
   [Scenarios] One line, two eras. Proposal era: topic health check (novelty check / innovation points vs degree level / feasibility), school-template field-by-field drafting, deadline sprints, proposal-defense rehearsal, proposal-stage comment closure. Post-approval era: section-by-section production, item-by-item comment closure, citation audit, format compliance, blind-review self-check, mid-term and defense materials. A topic dossier carries the whole line — within the session, and across sessions via a pasteable handoff card.
   [Routing] Topic or advisor choice undecided → aminer-topic-advisor-selection; journal/conference manuscripts → aminer-paper-writing; experiment troubleshooting → aminer-experiment-to-paper; deep reading → aminer-paper-deep-reading; patents → aminer-patent-tech-intelligence.
-homepage: https://github.com/AMinerOrg/aminer-open-skill/tree/main/skills/aminer-thesis-writing
+homepage: https://github.com/AMinerOrg/aminer-research-skills/tree/main/skills/aminer-thesis-writing
 metadata:
   {
     "openclaw":

@@ -6,7 +6,7 @@ description: >
   Use when the user wants to classify, organize, or map a supplied paper collection by research topic.
   If titles or complete abstracts are missing, first obtain them through an available local PDF-extraction capability or an AMiner search skill/API, then generate the taxonomy.
   Do not use this skill to implement PDF parsing, search for unrelated papers, create folders, or create symbolic links.
-homepage: https://github.com/AMinerOrg/aminer-open-skill/tree/main/skills/scientific-taxonomy
+homepage: https://github.com/AMinerOrg/aminer-research-skills/tree/main/skills/scientific-taxonomy
 metadata:
   version: "1.0.5"
   author: "AMiner"

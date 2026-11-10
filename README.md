@@ -25,7 +25,7 @@
 
 ---
 
-`aminer-open-skill` 面向科研全流程收录基于 AMiner 学术数据的可复用技能，强调真实学术数据、可验证证据链与可直接使用的科研产物。
+`aminer-research-skills` 面向科研全流程收录基于 AMiner 学术数据的可复用技能，强调真实学术数据、可验证证据链与可直接使用的科研产物。
 
 ## 在线使用：科研工作流技能
 
@@ -79,14 +79,14 @@
 **1. 安装技能**（需要 Node.js 18+，`--skill` 换成需要的技能名，`'*'` 表示全部）：
 
 ```bash
-npx skills add AMinerOrg/aminer-open-skill --agent claude-code --skill aminer-free-academic --yes
+npx skills add AMinerOrg/aminer-research-skills --agent claude-code --skill aminer-free-academic --yes
 ```
 
 Claude Code 用户也可以用插件方式安装，会同时注册技能自带的 slash command：
 
 ```text
-/plugin marketplace add AMinerOrg/aminer-open-skill
-/plugin install aminer-free-academic@aminer-open-skills
+/plugin marketplace add AMinerOrg/aminer-research-skills
+/plugin install aminer-free-academic@aminer-research-skills
 ```
 
 **2. 配置 Token**：在 [AMiner 控制台](https://open.aminer.cn/open/board?tab=control)生成 Token，并在 Agent 的运行环境中配置：
@@ -101,11 +101,11 @@ export AMINER_API_KEY="<YOUR_TOKEN>"
 
 ## 反馈与联系
 
-- 使用问题与 Bug：[GitHub Issues](https://github.com/AMinerOrg/aminer-open-skill/issues)
+- 使用问题与 Bug：[GitHub Issues](https://github.com/AMinerOrg/aminer-research-skills/issues)
 - 邮件：[report@aminer.cn](mailto:report@aminer.cn)
 - API 接入与计费：[AMiner 开放平台](https://open.aminer.cn/open/docs)
 
 
 ## Star 历史
 
-[![Star History Chart](https://api.star-history.com/svg?repos=AMinerOrg/aminer-open-skill&type=Date)](https://star-history.com/#AMinerOrg/aminer-open-skill&Date)
+[![Star History Chart](https://api.star-history.com/svg?repos=AMinerOrg/aminer-research-skills&type=Date)](https://star-history.com/#AMinerOrg/aminer-research-skills&Date)

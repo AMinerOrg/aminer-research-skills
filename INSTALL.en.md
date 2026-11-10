@@ -15,21 +15,21 @@ Every directory under `skills/` is an independently installable skill. Whichever
 Requires [Node.js 18 or later](https://nodejs.org/); no global CLI install needed. List the installable skills first:
 
 ```bash
-npx skills add AMinerOrg/aminer-open-skill --list
+npx skills add AMinerOrg/aminer-research-skills --list
 ```
 
 Install into the current project (omit `--global`) or for your user (add `--global`). `--agent` accepts values such as `claude-code`, `codex`, `openclaw`, `cursor`, `trae`:
 
 ```bash
 # Free entry point only, into the current project's Claude Code
-npx skills add AMinerOrg/aminer-open-skill --agent claude-code --skill aminer-free-academic --yes
+npx skills add AMinerOrg/aminer-research-skills --agent claude-code --skill aminer-free-academic --yes
 
 # Several skills, globally for Codex
-npx skills add AMinerOrg/aminer-open-skill --global --agent codex \
+npx skills add AMinerOrg/aminer-research-skills --global --agent codex \
   --skill aminer-free-academic --skill aminer-academic-search --yes
 
 # Every skill
-npx skills add AMinerOrg/aminer-open-skill --global --agent claude-code --skill '*' --yes
+npx skills add AMinerOrg/aminer-research-skills --global --agent claude-code --skill '*' --yes
 ```
 
 List and update:
@@ -43,17 +43,17 @@ npx skills update --global --yes
 
 ## 2. Claude Code plugin
 
-The repository ships a plugin manifest, [`.claude-plugin/marketplace.json`](.claude-plugin/marketplace.json) (marketplace name `aminer-open-skills`), with one plugin per skill. In Claude Code, run:
+The repository ships a plugin manifest, [`.claude-plugin/marketplace.json`](.claude-plugin/marketplace.json) (marketplace name `aminer-research-skills`), with one plugin per skill. In Claude Code, run:
 
 ```text
-/plugin marketplace add AMinerOrg/aminer-open-skill
-/plugin install aminer-free-academic@aminer-open-skills
+/plugin marketplace add AMinerOrg/aminer-research-skills
+/plugin install aminer-free-academic@aminer-research-skills
 ```
 
 For other skills, replace `aminer-free-academic` with a name from the [Skill Catalog](SKILLS.en.md), or run only the first line and pick plugins in the `/plugin` UI. To pull new versions:
 
 ```text
-/plugin marketplace update aminer-open-skills
+/plugin marketplace update aminer-research-skills
 ```
 
 The plugin install also registers each skill's slash commands (its `commands/` directory). They carry the plugin-name prefix, e.g. `/aminer-daily-paper:aminer-dp`, `/aminer-deep-search:aminer-deep-search`.
@@ -61,7 +61,7 @@ The plugin install also registers each skill's slash commands (its `commands/` d
 ## 3. Manual install (Codex / OpenClaw / other agents)
 
 ```bash
-git clone https://github.com/AMinerOrg/aminer-open-skill.git ~/ai-skills/aminer-open-skill
+git clone https://github.com/AMinerOrg/aminer-research-skills.git ~/ai-skills/aminer-research-skills
 ```
 
 Put each selected `skills/<skill-name>/` directory, whole, into your agent's skill directory:
@@ -75,7 +75,7 @@ Put each selected `skills/<skill-name>/` directory, whole, into your agent's ski
 Prefer symlinks over copies, so a `git pull` in the clone updates the skills:
 
 ```bash
-ln -s ~/ai-skills/aminer-open-skill/skills/aminer-free-academic ~/.codex/skills/aminer-free-academic
+ln -s ~/ai-skills/aminer-research-skills/skills/aminer-free-academic ~/.codex/skills/aminer-free-academic
 ```
 
 Manual installs do not register slash commands (command files depend on the plugin variable `CLAUDE_PLUGIN_ROOT`); trigger skills with natural language instead.
@@ -139,7 +139,7 @@ Standalone CLI commands, CI jobs, and scheduled tasks must set the token where t
 ## 7. Repository layout
 
 ```text
-aminer-open-skill/
+aminer-research-skills/
 ├── .claude-plugin/marketplace.json   # Claude plugin manifest
 ├── tools/                            # quick token-setup scripts for local sessions
 └── skills/

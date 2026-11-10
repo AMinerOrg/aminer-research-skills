@@ -25,7 +25,7 @@
 
 ---
 
-`aminer-open-skill` collects reusable research skills built on AMiner academic data for the full research lifecycle, emphasizing real academic data, verifiable evidence chains, and directly usable research artifacts.
+`aminer-research-skills` collects reusable research skills built on AMiner academic data for the full research lifecycle, emphasizing real academic data, verifiable evidence chains, and directly usable research artifacts.
 
 ## Use online: research workflow skills
 
@@ -79,14 +79,14 @@ The other 14 skills run in a local agent (Claude Code, Codex, OpenClaw, and othe
 **1. Install skills** (requires Node.js 18+; replace `--skill` with the skills you need, or `'*'` for all):
 
 ```bash
-npx skills add AMinerOrg/aminer-open-skill --agent claude-code --skill aminer-free-academic --yes
+npx skills add AMinerOrg/aminer-research-skills --agent claude-code --skill aminer-free-academic --yes
 ```
 
 Claude Code users can also install as plugins, which also registers each skill's slash commands:
 
 ```text
-/plugin marketplace add AMinerOrg/aminer-open-skill
-/plugin install aminer-free-academic@aminer-open-skills
+/plugin marketplace add AMinerOrg/aminer-research-skills
+/plugin install aminer-free-academic@aminer-research-skills
 ```
 
 **2. Configure the token**: generate one in the [AMiner Console](https://open.aminer.cn/open/board?tab=control) and set it in the agent's environment:
@@ -101,7 +101,7 @@ Manual install, Python dependencies, OpenClaw setup, and billing notes are in th
 
 ## Feedback and contact
 
-- Usage questions and bugs: [GitHub Issues](https://github.com/AMinerOrg/aminer-open-skill/issues)
+- Usage questions and bugs: [GitHub Issues](https://github.com/AMinerOrg/aminer-research-skills/issues)
 - Email: [report@aminer.cn](mailto:report@aminer.cn)
 - API access and billing: [AMiner Open Platform](https://open.aminer.cn/open/docs)
 
@@ -110,4 +110,4 @@ Manual install, Python dependencies, OpenClaw setup, and billing notes are in th
 
 ## Star History
 
-[![Star History Chart](https://api.star-history.com/svg?repos=AMinerOrg/aminer-open-skill&type=Date)](https://star-history.com/#AMinerOrg/aminer-open-skill&Date)
+[![Star History Chart](https://api.star-history.com/svg?repos=AMinerOrg/aminer-research-skills&type=Date)](https://star-history.com/#AMinerOrg/aminer-research-skills&Date)

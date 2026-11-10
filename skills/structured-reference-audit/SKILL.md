@@ -7,7 +7,7 @@ description: >
   Build an auditable reference ledger from a paper PDF with GROBID, then resolve
   structurally parsed entries through AMiner. Use when a user needs conservative
   reference-existence checking rather than a direct PDF-level FAKE verdict.
-homepage: https://github.com/AMinerOrg/aminer-open-skill/tree/main/skills/structured-reference-audit
+homepage: https://github.com/AMinerOrg/aminer-research-skills/tree/main/skills/structured-reference-audit
 ---
 
 # Structured Reference Audit

@@ -15,21 +15,21 @@
 需要 [Node.js 18 或更高版本](https://nodejs.org/)，无需全局安装 CLI。先查看可安装的技能名：
 
 ```bash
-npx skills add AMinerOrg/aminer-open-skill --list
+npx skills add AMinerOrg/aminer-research-skills --list
 ```
 
 按需安装到当前项目（省略 `--global`）或用户全局（加 `--global`）。`--agent` 取值如 `claude-code`、`codex`、`openclaw`、`cursor`、`trae`：
 
 ```bash
 # 只安装免费入口，安装到当前项目的 Claude Code
-npx skills add AMinerOrg/aminer-open-skill --agent claude-code --skill aminer-free-academic --yes
+npx skills add AMinerOrg/aminer-research-skills --agent claude-code --skill aminer-free-academic --yes
 
 # 安装多个技能到 Codex 全局
-npx skills add AMinerOrg/aminer-open-skill --global --agent codex \
+npx skills add AMinerOrg/aminer-research-skills --global --agent codex \
   --skill aminer-free-academic --skill aminer-academic-search --yes
 
 # 安装全部技能
-npx skills add AMinerOrg/aminer-open-skill --global --agent claude-code --skill '*' --yes
+npx skills add AMinerOrg/aminer-research-skills --global --agent claude-code --skill '*' --yes
 ```
 
 查看与更新：
@@ -43,17 +43,17 @@ npx skills update --global --yes
 
 ## 2. Claude Code 插件安装
 
-本仓库自带插件清单 [`.claude-plugin/marketplace.json`](.claude-plugin/marketplace.json)（市场名 `aminer-open-skills`），每个技能是一个插件。在 Claude Code 中执行：
+本仓库自带插件清单 [`.claude-plugin/marketplace.json`](.claude-plugin/marketplace.json)（市场名 `aminer-research-skills`），每个技能是一个插件。在 Claude Code 中执行：
 
 ```text
-/plugin marketplace add AMinerOrg/aminer-open-skill
-/plugin install aminer-free-academic@aminer-open-skills
+/plugin marketplace add AMinerOrg/aminer-research-skills
+/plugin install aminer-free-academic@aminer-research-skills
 ```
 
 其他技能将 `aminer-free-academic` 替换为 [技能目录](SKILLS.md) 中的名称即可；也可以只执行第一行，再用 `/plugin` 打开界面勾选。更新版本：
 
 ```text
-/plugin marketplace update aminer-open-skills
+/plugin marketplace update aminer-research-skills
 ```
 
 插件方式会同时注册技能自带的 slash command（`commands/` 目录），命令带插件名前缀，例如 `/aminer-daily-paper:aminer-dp`、`/aminer-deep-search:aminer-deep-search`。
@@ -61,7 +61,7 @@ npx skills update --global --yes
 ## 3. 手动安装（Codex / OpenClaw / 其他 Agent）
 
 ```bash
-git clone https://github.com/AMinerOrg/aminer-open-skill.git ~/ai-skills/aminer-open-skill
+git clone https://github.com/AMinerOrg/aminer-research-skills.git ~/ai-skills/aminer-research-skills
 ```
 
 将需要的 `skills/<skill-name>/` 整个目录放入 Agent 的技能目录：
@@ -75,7 +75,7 @@ git clone https://github.com/AMinerOrg/aminer-open-skill.git ~/ai-skills/aminer-
 推荐用软链接代替复制，之后在 clone 目录里 `git pull` 即可更新：
 
 ```bash
-ln -s ~/ai-skills/aminer-open-skill/skills/aminer-free-academic ~/.codex/skills/aminer-free-academic
+ln -s ~/ai-skills/aminer-research-skills/skills/aminer-free-academic ~/.codex/skills/aminer-free-academic
 ```
 
 手动安装不会注册 slash command（命令文件依赖插件环境变量 `CLAUDE_PLUGIN_ROOT`），直接用自然语言触发技能即可。
@@ -139,7 +139,7 @@ openclaw config set env.vars.AMINER_API_KEY "<YOUR_TOKEN>"
 ## 7. 仓库目录结构
 
 ```text
-aminer-open-skill/
+aminer-research-skills/
 ├── .claude-plugin/marketplace.json   # Claude 插件清单
 ├── tools/                            # 本地会话的 Token 快速配置脚本
 └── skills/

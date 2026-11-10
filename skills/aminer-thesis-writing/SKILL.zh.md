@@ -5,7 +5,7 @@ version: 1.0.0
 author: AMiner
 contact: report@aminer.cn
 description: "[激活条件] 学位论文生产线，从开题关到答辩：「开题报告怎么写」「我的课题能过开题吗」「这是学校模板，帮我填」「15 号开题截止」「做一套开题答辩 PPT」「现在写 3.2 节」+ 贴目录、「逐条落实导师意见」「找两篇近两年文献支撑这句话」「你是盲审专家」「答辩每页 PPT 讲什么」「按学校格式查全篇」，或贴带批注的稿子/编号意见清单。 [适用场景] 一条线、两个纪元。开题纪元：选题体检（查新/创新点对学位层级/可行性）、学校模板逐字段起草、死线冲刺、开题答辩演练、开题阶段意见销号。通过后纪元：逐节生产、逐条意见销号、引文审计、格式合规、盲审自检、中期与答辩材料。课题档案全程承载——会话内维护，跨会话凭可贴回的档案卡续接。 [路由规则] 选题或择师未定 → aminer-topic-advisor-selection；期刊/会议稿件 → aminer-paper-writing；实验排障 → aminer-experiment-to-paper；精读 → aminer-paper-deep-reading；专利 → aminer-patent-tech-intelligence。"
-homepage: https://github.com/AMinerOrg/aminer-open-skill/tree/main/skills/aminer-thesis-writing
+homepage: https://github.com/AMinerOrg/aminer-research-skills/tree/main/skills/aminer-thesis-writing
 metadata:
   {
     "openclaw":

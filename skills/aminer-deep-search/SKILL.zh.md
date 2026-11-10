@@ -14,7 +14,7 @@ description: >
   附带脚本只是纯工具命令，调用 AMiner 开放平台的正规接口并只输出 JSON tool-result，无需配置任何额外 LLM。
   支持结构化约束（年份区间、作者、机构、来源、语言、排除词、引用区间）与多种排序目标
   （最新、相关性、影响力、经典+最新）。
-homepage: https://github.com/AMinerOrg/aminer-open-skill/tree/main/skills/aminer-deep-search
+homepage: https://github.com/AMinerOrg/aminer-research-skills/tree/main/skills/aminer-deep-search
 metadata:
   {
     "openclaw":
