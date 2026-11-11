@@ -16,7 +16,7 @@
     · <a href="README.md">中文</a>
   </p>
   <p>
-    <img src="assets/readme-banner-en-v3.png" alt="AMiner Research Skills: research skills powered by real academic data" width="100%">
+    <img src="assets/readme-banner-en-v4.png" alt="AMiner Research Skills: research skills powered by real academic data" width="100%">
   </p>
   <p>
     <b>AMiner web app: Smart Search, AI Reading, Res Labs, AI2000 and more built in — visit <a href="https://www.aminer.cn">https://www.aminer.cn</a></b>
