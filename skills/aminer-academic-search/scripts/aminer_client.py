@@ -633,7 +633,7 @@ def org_paper_relation(token: str, org_id: str, offset: int = 0) -> Any:
 
 def org_patent_relation(token: str, org_id: str,
                         page: int = 1, page_size: int = 100, source: str = "app") -> Any:
-    """Org Patents (¥0.10/call): retrieve institution patent IDs; page from 1, page_size effectively ≤100.
+    """Org Patents (¥0.10/call): retrieve institution patent IDs; page from 1, page_size ≤100.
 
     source: "app" (applicant, default — every filing incl. pending applications) or "ass"
     (assignee — current rights holder; granted / transferred patents). Without it the

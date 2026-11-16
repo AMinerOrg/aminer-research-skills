@@ -956,7 +956,7 @@ curl -X GET \
 
 - **URL**: `GET /api/organization/patent/relation`
 - **Price**: ¥0.10/call
-- **Description**: Retrieve the list of patent IDs owned by an institution; supports pagination with up to 10,000 results per call.
+- **Description**: Retrieve the list of patent IDs owned by an institution; supports pagination with up to 100 results per call.
 
 **Request Parameters:**
 
@@ -964,7 +964,7 @@ curl -X GET \
 |--------|------|------|------|
 | org_id | string | Yes | Institution ID |
 | page | number | No | Page number (starts at 1) |
-| page_size | number | No | Items per page; documented maximum 10,000, but responses are capped at 100 — page beyond that |
+| page_size | number | No | Items per page, max 100; page beyond that |
 | source | string | No | `app` (applicant: every filing, including pending applications — use for R&D activity / patent landscaping) or `ass` (assignee: current rights holder — granted and transferred patents; use for ownership, licensing, infringement risk). Always send it: without it the query times out (504). |
 
 **Response Fields:**
@@ -1413,6 +1413,6 @@ curl -X POST \
 | `person_search` | `size` max 10; `offset` fixed at 0 (no pagination) |
 | `org_person_relation` | Fixed 10 results per call; use `offset` to paginate |
 | `org_paper_relation` | Fixed 10 results per call; use `offset` to paginate |
-| `org_patent_relation` | `page_size` effectively ≤100 (documented 10,000); `page` starts at 1; always send `source` |
+| `org_patent_relation` | `page_size` max 100; `page` starts at 1; always send `source` |
 | `venue_paper_relation` | Use `offset` + `limit` to paginate |
 | `paper_info` | `ids` array max 100 items |
