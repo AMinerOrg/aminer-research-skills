@@ -28,6 +28,9 @@ def frontmatter_name(skill_md: Path) -> str:
 
 
 def main() -> int:
+    if not (ROOT / "skills").is_dir():
+        print(f"ERROR {ROOT} is not a repository root (no skills/ directory)")
+        return 2
     errors = []
 
     skills = {
