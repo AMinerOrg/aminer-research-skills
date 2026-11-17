@@ -21,7 +21,6 @@ skills/*/.cache/
 
 # Personal research notes (not part of the shared skill code)
 docs/
-CONTRIBUTING.zh.md
 # Local API smoke-test script; contains a hardcoded token.
 r_t.py
 .claude/
@@ -32,9 +31,8 @@ skills/aminer-deep-research/
 node_modules/
 package.json
 package-lock.json
-# Internal-only docs and maintainer tooling (not published).
+# Internal-only docs (not published).
 INTEGRATION_GUIDE.md
-tools/check_skills.py
 
 # Upstream release drop, not part of the repo
 skills_release.zip

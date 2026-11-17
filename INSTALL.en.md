@@ -134,7 +134,7 @@ Standalone CLI commands, CI jobs, and scheduled tasks must set the token where t
 - `aminer-exp-extraction` calls the Zhipu BigModel API instead: set `BIGMODEL_API_KEY` for it (`OPENAI_API_KEY` accepted as fallback). It never uses the AMiner token.
 - Free AMiner APIs still require a token. Start with `aminer-free-academic` before using paid APIs.
 - Some tasks may incur API charges. Review the estimated cost before approving large searches or expensive calls.
-- The setup tools under `tools/` configure local chat sessions only. Set the token separately for OpenClaw, CLI, CI, and scheduled jobs.
+- The token setup scripts under `tools/` (`setup-aminer-token.*`) configure local chat sessions only. Set the token separately for OpenClaw, CLI, CI, and scheduled jobs.
 - For direct API integration rather than Skill usage, see the [AMiner Open Platform documentation](https://open.aminer.cn/open/docs).
 
 ## 7. Repository layout
@@ -142,7 +142,7 @@ Standalone CLI commands, CI jobs, and scheduled tasks must set the token where t
 ```text
 aminer-research-skills/
 ├── .claude-plugin/marketplace.json   # Claude plugin manifest
-├── tools/                            # quick token-setup scripts for local sessions
+├── tools/                            # token setup scripts; check_skills.py (pre-PR check, see CONTRIBUTING.en.md)
 └── skills/
     ├── <skill-name>/
     │   ├── SKILL.md                  # skill definition: frontmatter + rules + workflow, loaded by the agent on trigger

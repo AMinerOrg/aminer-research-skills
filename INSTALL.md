@@ -134,7 +134,7 @@ openclaw config set env.vars.AMINER_API_KEY "<YOUR_TOKEN>"
 - `aminer-exp-extraction` 调用的是智谱 BigModel API：请为它配置 `BIGMODEL_API_KEY`（可回退 `OPENAI_API_KEY`），它不使用 AMiner Token。
 - AMiner 免费接口仍需 Token。建议先用 `aminer-free-academic`，仅在必要时调用计费 API。
 - 部分任务会产生 API 费用。执行大规模检索或高成本调用前，应先查看预估成本。
-- `tools/` 下的配置工具只面向本地对话式环境。OpenClaw、CLI、CI 和定时任务需要单独配置。
+- `tools/` 下的 Token 配置脚本（`setup-aminer-token.*`）只面向本地对话式环境。OpenClaw、CLI、CI 和定时任务需要单独配置。
 - 如果需要直接集成 API 而不是使用 Skill，请参考 [AMiner 开放平台文档](https://open.aminer.cn/open/docs)。
 
 ## 7. 仓库目录结构
@@ -142,7 +142,7 @@ openclaw config set env.vars.AMINER_API_KEY "<YOUR_TOKEN>"
 ```text
 aminer-research-skills/
 ├── .claude-plugin/marketplace.json   # Claude 插件清单
-├── tools/                            # 本地会话的 Token 快速配置脚本
+├── tools/                            # Token 快速配置脚本；check_skills.py（提交前自查，见 CONTRIBUTING.md）
 └── skills/
     ├── <skill-name>/
     │   ├── SKILL.md                  # 技能定义：frontmatter + 规则 + 工作流，触发后由 agent 加载

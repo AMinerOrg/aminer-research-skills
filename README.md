@@ -105,6 +105,7 @@ export AMINER_API_KEY="<YOUR_TOKEN>"
 - 使用问题与 Bug：[GitHub Issues](https://github.com/AMinerOrg/aminer-research-skills/issues)
 - 邮件：[report@aminer.cn](mailto:report@aminer.cn)
 - API 接入与计费：[AMiner 开放平台](https://open.aminer.cn/open/docs)
+- 参与贡献：[贡献指南](CONTRIBUTING.md)
 
 
 ## Star 历史

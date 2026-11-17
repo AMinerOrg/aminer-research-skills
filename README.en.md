@@ -105,6 +105,7 @@ Manual install, Python dependencies, OpenClaw setup, and billing notes are in th
 - Usage questions and bugs: [GitHub Issues](https://github.com/AMinerOrg/aminer-research-skills/issues)
 - Email: [report@aminer.cn](mailto:report@aminer.cn)
 - API access and billing: [AMiner Open Platform](https://open.aminer.cn/open/docs)
+- Contributing: [Contributing guide](CONTRIBUTING.en.md)
 
 
 
