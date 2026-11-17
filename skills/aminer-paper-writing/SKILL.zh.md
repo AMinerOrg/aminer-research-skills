@@ -4,7 +4,7 @@ name_zh: 论文写作与返修
 version: 1.0.0
 author: AMiner
 contact: report@aminer.cn
-description: "[激活条件] 期刊/会议论文全流程线：「帮我写一篇 X 的综述」（查空、大纲、逐节写作、投稿材料）；贴自己的稿子段落——「给这段配几篇文献」「把引用占位符填上」「只润色不改长度」「逐条落实导师意见」；投稿前审稿——「你是审稿人，审审我的稿」「这篇能过 {venue} 吗」；真实意见到来——「逐条回复」「写回复信」「二审意见到了，死线快到了」。 [适用场景] 一条流水线、四个工位：从零成稿生产；用户自有稿件的锚定配引迭代；投稿前模拟审稿（维度记分卡、行级问题清单、录用风险预判）；真实意见返修（拆条台账、逐条修改、point-by-point 回复信、多轮周期与死线管理）。稿件状态与引文池会话内维护，跨会话凭可贴回的档案卡续接。 [路由规则] 学位论文开题/章节/盲审/答辩 → aminer-thesis-writing；选题或择师未定 → aminer-topic-advisor-selection；实验执行 → aminer-experiment-to-paper；精读他人的论文 → aminer-paper-deep-reading；专利 OA → aminer-patent-tech-intelligence。"
+description: "[激活条件] 期刊/会议论文全流程线：「帮我写一篇 X 的综述」（查空、大纲、逐节写作、投稿材料）；贴自己的稿子段落——「给这段配几篇文献」「把引用占位符填上」「只润色不改长度」「逐条落实导师意见」；投稿前审稿——「你是审稿人，审审我的稿」「这篇能过 {venue} 吗」；真实意见到来——「逐条回复」「写回复信」「二审意见到了，死线快到了」。 [适用场景] 一条流水线、四个工位：从零成稿生产；用户自有稿件的锚定配引迭代；投稿前模拟审稿（维度记分卡、行级问题清单、录用风险预判）；真实意见返修（拆条台账、逐条修改、point-by-point 回复信、多轮周期与死线管理）。稿件状态与引文池会话内维护，跨会话凭可贴回的档案卡续接。 [路由规则] 学位论文开题/章节/盲审/答辩 → aminer-thesis-writing；选题未定 → aminer-topic-selection；择师未定 → aminer-advisor-selection；实验执行 → aminer-experiment-to-paper；精读他人的论文 → aminer-paper-deep-reading；专利 OA → aminer-patent-tech-intelligence。"
 homepage: https://github.com/AMinerOrg/aminer-research-skills/tree/main/skills/aminer-paper-writing
 metadata:
   {
@@ -47,7 +47,7 @@ metadata:
 3. **导师意见不是投稿意见**：期刊稿上的导师批注不触发 B——按来源轴拆（W 线上稿 → §2.2；自有稿 → R 意见驱动型）。同一稿的真实编辑/审稿意见 → B。
 4. **交付物判别（R vs B）**：请求的交付物含回复信组装/返修行政文书/多轮周期管理/验收审计/死线管理任一项 → B 接管整个请求（含其中的逐条修改子任务）；都没有（纯逐条修改）→ R 意见驱动型。一个请求绝不双轨并行。
 5. **锚定语境判别（R vs S）**：锚定迭代链内的段落咨询（本会话已有档案或已贴回档案卡/已进入贴-改循环）→ R 健康检查行；独立的投稿前全文或单节体检（含无人设的「帮我看看这部分」）→ S。S 引文三态表的修复动作回到 R，修完可回 S 再审一轮。
-6. 混合流：一条消息多个诉求按主诉求路由、次诉求作参考；修改动摇方向本身（换题）→ `aminer-topic-advisor-selection`；无稿可贴 → 先要稿。
+6. 混合流：一条消息多个诉求按主诉求路由、次诉求作参考；修改动摇方向本身（换题）→ `aminer-topic-selection`；无稿可贴 → 先要稿。
 
 ## 2 工位 W — 从零成稿
 
@@ -239,7 +239,7 @@ python3 scripts/aminer_client.py --action venue_search --params '{"name":"<JOURN
 ## 8 边界与交接
 
 1. **`aminer-thesis-writing`（稿件类型轴）**：学位论文（开题/章节/盲审/答辩）→ 那边，含学位论文盲审自检与导师/盲审意见销号；期刊/会议稿件 → 这边。混合会话按当前稿件类型切换契约；两本销号台账绝不交叉污染。
-2. **`aminer-topic-advisor-selection`（方向轴）**：修改动摇方向本身（换题/选方向/择师）→ 那边；本线绝不重开已定之题。
+2. **`aminer-topic-selection`（方向轴）/ `aminer-advisor-selection`（择师轴）**：修改动摇方向本身（换题/选方向）→ 前者；择师 → 后者；本线绝不重开已定之题。
 3. **`aminer-experiment-to-paper`（执行层）**：补实验/补统计意见与实验排障在执行层交接；本线只给选项菜单与协商路径；从实验数据产结果→讨论初稿在那边起稿；稿回来后迭代回本线。
 4. **`aminer-paper-deep-reading`（稿子是谁的）**：贴他人的论文精读 → 那边；本线只处理用户自有稿件。
 5. **`aminer-patent-tech-intelligence`**：专利 OA 答复归专利域。

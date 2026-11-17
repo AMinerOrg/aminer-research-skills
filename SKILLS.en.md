@@ -2,7 +2,7 @@
 
 [← Back to README](README.en.md) · [中文](SKILLS.md)
 
-`skills/` currently contains the following 22 triggerable skills. Click a skill name for the full skill definition. The first 7 are research workflow skills, available online in the AMiner web app; the rest target local agents and are grouped by research stage.
+`skills/` currently contains the following 23 triggerable skills. Click a skill name for the full skill definition. The first 8 are research workflow skills, available online in the AMiner web app; the rest target local agents and are grouped by research stage.
 
 **Contents**:
 
@@ -17,15 +17,16 @@
 
 ## Research workflows (available online in the web app)
 
-| Skill | Status | Purpose | Triggers | Token |
+| Skill | Purpose | Triggers | Token | Status |
 | --- | --- | --- | --- | --- |
-| [`aminer-paper-writing`](skills/aminer-paper-writing/SKILL.md) | Stable | Manuscript writing and revision: drafting from scratch with real citations, simulated review before submission, item-by-item responses to real reviewer comments | "write the Related Work with real citations", "respond to each reviewer comment" | Required; free-first |
-| [`aminer-paper-deep-reading`](skills/aminer-paper-deep-reading/SKILL.md) | Stable | In-depth paper reading: structured close reading, sentence-by-sentence translation, reproduction-grade protocol audits; also cross-literature parameter tables and locating papers from vague descriptions | "deep-read this paper", "what is the typical value of X" | Required; free-first |
-| [`aminer-experiment-to-paper`](skills/aminer-experiment-to-paper/SKILL.md) | Stable | Experiment analysis and results writing: debugging code and experiment designs, verifying method provenance, turning results into paper prose | "my experiment cannot reproduce the reported baseline, help me debug" | Required; free-first |
-| [`aminer-grant-application`](skills/aminer-grant-application/SKILL.md) | Stable | Grant proposal writing: extract requirements from the guideline, distill the scientific question, draft section by section, run a novelty check, simulate the expert panel review | "extract the application requirements from this guideline", "review my proposal as an expert panel" | Required; free-first |
-| [`aminer-topic-advisor-selection`](skills/aminer-topic-advisor-selection/SKILL.md) | Stable | Topic and advisor selection: assess the level of competition, run a novelty check on the topic; enumerate a department's advisors, build profiles, compare, and draft outreach emails | "is this direction still worth pursuing", "list the advisors in this department" | Required; per-advisor `person_detail` ¥1.00/call — converge on free APIs before pulling details |
-| [`aminer-thesis-writing`](skills/aminer-thesis-writing/SKILL.md) | Stable | Thesis: proposal to defense: literature scan and novelty check, section-by-section drafting against the school template, working through advisor and committee comments, format compliance, defense materials | "do the literature scan for my proposal", "work through my advisor's comments" | Required; free-first |
-| [`aminer-patent-tech-intelligence`](skills/aminer-patent-tech-intelligence/SKILL.md) | Stable | Patents and technology intelligence: technology survey reports, benchmark studies, URS/SOP documents; prior-art retrieval (strict filing-date cutoff), claims and disclosure drafting, responses to office actions | "produce a technology survey of X", "retrieve prior art published before this date" | Required; free-first; watch `person_detail` unit price in bulk screening |
+| [`aminer-paper-writing`](skills/aminer-paper-writing/SKILL.md) | Manuscript writing and revision: drafting from scratch with real citations, simulated review before submission, item-by-item responses to real reviewer comments | "write the Related Work with real citations", "respond to each reviewer comment" | Required; free-first | Stable |
+| [`aminer-paper-deep-reading`](skills/aminer-paper-deep-reading/SKILL.md) | In-depth paper reading: structured close reading, sentence-by-sentence translation, reproduction-grade protocol audits; also cross-literature parameter tables and locating papers from vague descriptions | "deep-read this paper", "what is the typical value of X" | Required; free-first | Stable |
+| [`aminer-experiment-to-paper`](skills/aminer-experiment-to-paper/SKILL.md) | Experiment analysis and results writing: debugging code and experiment designs, verifying method provenance, turning results into paper prose | "my experiment cannot reproduce the reported baseline, help me debug" | Required; free-first | Stable |
+| [`aminer-grant-application`](skills/aminer-grant-application/SKILL.md) | Grant proposal writing: extract requirements from the guideline, distill the scientific question, draft section by section, run a novelty check, simulate the expert panel review | "extract the application requirements from this guideline", "review my proposal as an expert panel" | Required; free-first | Stable |
+| [`aminer-topic-selection`](skills/aminer-topic-selection/SKILL.md) | Topic selection: assess the level of competition, run a novelty check, compare candidate topics, settle on one, and deliver an initial reading list with a proposal skeleton | "is this direction still worth pursuing", "give me a few candidate topics" | Required; free-first | Stable |
+| [`aminer-advisor-selection`](skills/aminer-advisor-selection/SKILL.md) | Advisor selection: enumerate a department's advisors, build profiles, compare, assess fit, and draft contact emails with reply follow-up | "list the advisors in this department", "advisor A or B" | Required; per-advisor `person_detail` ¥1.00/call — converge on free APIs before pulling details | Stable |
+| [`aminer-thesis-writing`](skills/aminer-thesis-writing/SKILL.md) | Thesis: proposal to defense: literature scan and novelty check, section-by-section drafting against the school template, working through advisor and committee comments, format compliance, defense materials | "do the literature scan for my proposal", "work through my advisor's comments" | Required; free-first | Stable |
+| [`aminer-patent-tech-intelligence`](skills/aminer-patent-tech-intelligence/SKILL.md) | Patents and technology intelligence: technology survey reports, benchmark studies, URS/SOP documents; prior-art retrieval (strict filing-date cutoff), claims and disclosure drafting, responses to office actions | "produce a technology survey of X", "retrieve prior art published before this date" | Required; free-first; watch `person_detail` unit price in bulk screening | Stable |
 
 **Example prompts**:
 
@@ -33,19 +34,20 @@
 - In-depth paper reading (`aminer-paper-deep-reading`): Deep-read "Attention Is All You Need": summarize the problem, method, experimental design, and key numbers, and suggest directions for further exploration.
 - Experiment analysis and results writing (`aminer-experiment-to-paper`): My experiment cannot reproduce the numbers reported in this paper — help me debug it, and verify the literature basis for this metric.
 - Grant proposal writing (`aminer-grant-application`): Extract the application requirements from this guideline, help me distill the scientific question and draft section by section, then review the proposal as an expert panel.
-- Topic and advisor selection (`aminer-topic-advisor-selection`): Assess the level of competition in "retrieval-augmented generation for industrial defect detection" and run a novelty check on the topic.
+- Topic selection (`aminer-topic-selection`): Assess the level of competition in "retrieval-augmented generation for industrial defect detection" and run a novelty check on the topic.
+- Advisor selection (`aminer-advisor-selection`): List the doctoral advisors of a university's CS department, build a profile for each advisor, and compare the top three.
 - Thesis: proposal to defense (`aminer-thesis-writing`): Do the literature scan and novelty check for my thesis proposal, then work through my advisor's comments on Chapter 2 one by one.
 - Patents and technology intelligence (`aminer-patent-tech-intelligence`): Produce a technology survey of solid-state electrolytes, and retrieve the closest prior art published before this filing date.
 
 ## Search and discovery
 
-| Skill | Status | Purpose | Triggers | Token |
+| Skill | Purpose | Triggers | Token | Status |
 | --- | --- | --- | --- | --- |
-| [`aminer-free-academic`](skills/aminer-free-academic/SKILL.md) | Stable | Zero-cost lookup of papers, scholars, institutions, venues, and patents via 7 free APIs | "find this paper by title", "the scholar's research interests and citation counts" | Free APIs, token still required |
-| [`aminer-academic-search`](skills/aminer-academic-search/SKILL.md) | Stable | Full academic data queries across papers, scholars, institutions, venues, and patents, plus structured experiment retrieval (29 APIs) | "build a full scholar profile", "return the Experiment JSON" | Required; some APIs billed; experiment retrieval ¥0.10/call |
-| [`aminer-daily-paper`](skills/aminer-daily-paper/SKILL.md) | Stable | Personalized paper recommendations by topic, scholar profile, or author | "recommend 8 recent highly-cited papers on X" | Required |
-| [`aminer-deep-search`](skills/aminer-deep-search/SKILL.md) | Stable | Collect hundreds of candidate papers for a survey: multi-round search, deduplication, citation snowballing | "collect 200 candidate papers for a survey" | Required |
-| [`sota-finder`](skills/sota-finder/SKILL.md) | Stable | Find the current or historical best result (SOTA) on a task, split incomparable scopes, build a sourced leaderboard | "what is the current SOTA on X" | Optional; only for AMiner enrichment |
+| [`aminer-free-academic`](skills/aminer-free-academic/SKILL.md) | Zero-cost lookup of papers, scholars, institutions, venues, and patents via 7 free APIs | "find this paper by title", "the scholar's research interests and citation counts" | Free APIs, token still required | Stable |
+| [`aminer-academic-search`](skills/aminer-academic-search/SKILL.md) | Full academic data queries across papers, scholars, institutions, venues, and patents, plus structured experiment retrieval (29 APIs) | "build a full scholar profile", "return the Experiment JSON" | Required; some APIs billed; experiment retrieval ¥0.10/call | Stable |
+| [`aminer-daily-paper`](skills/aminer-daily-paper/SKILL.md) | Personalized paper recommendations by topic, scholar profile, or author | "recommend 8 recent highly-cited papers on X" | Required | Stable |
+| [`aminer-deep-search`](skills/aminer-deep-search/SKILL.md) | Collect hundreds of candidate papers for a survey: multi-round search, deduplication, citation snowballing | "collect 200 candidate papers for a survey" | Required | Stable |
+| [`sota-finder`](skills/sota-finder/SKILL.md) | Find the current or historical best result (SOTA) on a task, split incomparable scopes, build a sourced leaderboard | "what is the current SOTA on X" | Optional; only for AMiner enrichment | Stable |
 
 **Example prompts**:
 
@@ -58,12 +60,12 @@
 
 ## Reading and organizing
 
-| Skill | Status | Purpose | Triggers | Token |
+| Skill | Purpose | Triggers | Token | Status |
 | --- | --- | --- | --- | --- |
-| [`aminer-pdf-ocr`](skills/aminer-pdf-ocr/SKILL.md) | Stable | Convert a paper PDF to full-text Markdown and extract experiment methods, datasets, and metrics | "convert this PDF to Markdown" | Required |
-| [`aminer-exp-extraction`](skills/aminer-exp-extraction/SKILL.md) | Stable | Extract experiment methods, datasets, metrics, and key results from paper Markdown as JSON | "extract methods / datasets / metrics from this paper's Markdown" | Requires `BIGMODEL_API_KEY`; no AMiner token |
-| [`scientific-taxonomy`](skills/scientific-taxonomy/SKILL.md) | Stable | Organize a batch of papers into a clear hierarchical taxonomy (Markdown) from titles and abstracts | "organize these papers into a coherent taxonomy" | Optional; only when AMiner fills missing metadata |
-| [`paper-source-trace`](skills/paper-source-trace/SKILL.md) | Stable | Trace a paper's claims to their citation sources, explain citation intent, and generate citation maps | "trace key claims to their sources" | Optional; only for AMiner enrichment |
+| [`aminer-pdf-ocr`](skills/aminer-pdf-ocr/SKILL.md) | Convert a paper PDF to full-text Markdown and extract experiment methods, datasets, and metrics | "convert this PDF to Markdown" | Required | Stable |
+| [`aminer-exp-extraction`](skills/aminer-exp-extraction/SKILL.md) | Extract experiment methods, datasets, metrics, and key results from paper Markdown as JSON | "extract methods / datasets / metrics from this paper's Markdown" | Requires `BIGMODEL_API_KEY`; no AMiner token | Stable |
+| [`scientific-taxonomy`](skills/scientific-taxonomy/SKILL.md) | Organize a batch of papers into a clear hierarchical taxonomy (Markdown) from titles and abstracts | "organize these papers into a coherent taxonomy" | Optional; only when AMiner fills missing metadata | Stable |
+| [`paper-source-trace`](skills/paper-source-trace/SKILL.md) | Trace a paper's claims to their citation sources, explain citation intent, and generate citation maps | "trace key claims to their sources" | Optional; only for AMiner enrichment | Stable |
 
 **Example prompts**:
 
@@ -74,9 +76,9 @@
 
 ## Research reports
 
-| Skill | Status | Purpose | Triggers | Token |
+| Skill | Purpose | Triggers | Token | Status |
 | --- | --- | --- | --- | --- |
-| [`deep-research`](skills/deep-research/SKILL.md) | Stable | Write a cited research report where every claim traces back to an evidence ledger | "research the X industry and write a cited report" | Required; free-first, billed APIs capped (¥20 hard stop) |
+| [`deep-research`](skills/deep-research/SKILL.md) | Write a cited research report where every claim traces back to an evidence ledger | "research the X industry and write a cited report" | Required; free-first, billed APIs capped (¥20 hard stop) | Stable |
 
 **Example prompts**:
 
@@ -84,10 +86,10 @@
 
 ## Manuscript coverage checks
 
-| Skill | Status | Purpose | Triggers | Token |
+| Skill | Purpose | Triggers | Token | Status |
 | --- | --- | --- | --- | --- |
-| [`baseline-finder`](skills/baseline-finder/SKILL.md) | Preview | Check a paper's experiments and citations against each other to find baselines it should have compared but didn't | "what baselines may be missing" | Model API key and AMiner token required; some API calls billed; GROBID for PDF mode |
-| [`related-work-audit`](skills/related-work-audit/SKILL.md) | Preview | Check a manuscript and its bibliography for potentially missing related work using AMiner evidence | "which important related work may be missing" | Model API key and AMiner token required; some API calls billed; GROBID for PDF mode |
+| [`baseline-finder`](skills/baseline-finder/SKILL.md) | Check a paper's experiments and citations against each other to find baselines it should have compared but didn't | "what baselines may be missing" | Model API key and AMiner token required; some API calls billed; GROBID for PDF mode | Preview |
+| [`related-work-audit`](skills/related-work-audit/SKILL.md) | Check a manuscript and its bibliography for potentially missing related work using AMiner evidence | "which important related work may be missing" | Model API key and AMiner token required; some API calls billed; GROBID for PDF mode | Preview |
 
 **Example prompts**:
 
@@ -96,11 +98,11 @@
 
 ## Citation checking
 
-| Skill | Status | Purpose | Triggers | Token |
+| Skill | Purpose | Triggers | Token | Status |
 | --- | --- | --- | --- | --- |
-| [`pdf-citation-verifier`](skills/pdf-citation-verifier/SKILL.md) | Stable | Verify every reference in a paper PDF actually exists; flag fabricated citations | "are the references in this PDF fabricated" | Required |
-| [`structured-reference-audit`](skills/structured-reference-audit/SKILL.md) | Stable | Conservative reference audit: parse the PDF into a ledger, resolve each entry; "unresolved" is not "fabricated" | "conservatively audit the references" | AMiner resolution needs a token; GROBID or TEI required |
-| [`citation-faithfulness`](skills/citation-faithfulness/SKILL.md) | Stable | Check each in-text citation actually supports the claim, catching distortions of the cited source | "does citation [12] actually support this claim" | No AMiner token; web access required |
+| [`pdf-citation-verifier`](skills/pdf-citation-verifier/SKILL.md) | Verify every reference in a paper PDF actually exists; flag fabricated citations | "are the references in this PDF fabricated" | Required | Stable |
+| [`structured-reference-audit`](skills/structured-reference-audit/SKILL.md) | Conservative reference audit: parse the PDF into a ledger, resolve each entry; "unresolved" is not "fabricated" | "conservatively audit the references" | AMiner resolution needs a token; GROBID or TEI required | Stable |
+| [`citation-faithfulness`](skills/citation-faithfulness/SKILL.md) | Check each in-text citation actually supports the claim, catching distortions of the cited source | "does citation [12] actually support this claim" | No AMiner token; web access required | Stable |
 
 **Example prompts**:
 

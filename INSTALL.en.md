@@ -94,7 +94,7 @@ Skill scripts need `python3`. Most skills use only the standard library; the fol
 | `baseline-finder` | httpx, openai, pypdf |
 | `related-work-audit` | httpx, openai, pypdf |
 
-The seven research-workflow skills (`aminer-topic-advisor-selection` / `aminer-paper-deep-reading` / `aminer-paper-writing` / `aminer-experiment-to-paper` / `aminer-thesis-writing` / `aminer-grant-application` / `aminer-patent-tech-intelligence`) depend on the standard library only — no extra installation needed.
+The eight research-workflow skills (`aminer-topic-selection` / `aminer-advisor-selection` / `aminer-paper-deep-reading` / `aminer-paper-writing` / `aminer-experiment-to-paper` / `aminer-thesis-writing` / `aminer-grant-application` / `aminer-patent-tech-intelligence`) depend on the standard library only — no extra installation needed.
 
 ```bash
 python3 -m pip install -r skills/<skill-name>/requirements.txt

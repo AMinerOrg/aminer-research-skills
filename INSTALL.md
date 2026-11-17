@@ -94,7 +94,7 @@ ln -s ~/ai-skills/aminer-research-skills/skills/aminer-free-academic ~/.codex/sk
 | `baseline-finder` | httpx、openai、pypdf |
 | `related-work-audit` | httpx、openai、pypdf |
 
-7 个科研工作流技能（`aminer-topic-advisor-selection` / `aminer-paper-deep-reading` / `aminer-paper-writing` / `aminer-experiment-to-paper` / `aminer-thesis-writing` / `aminer-grant-application` / `aminer-patent-tech-intelligence`）只依赖标准库，无需额外安装。
+8 个科研工作流技能（`aminer-topic-selection` / `aminer-advisor-selection` / `aminer-paper-deep-reading` / `aminer-paper-writing` / `aminer-experiment-to-paper` / `aminer-thesis-writing` / `aminer-grant-application` / `aminer-patent-tech-intelligence`）只依赖标准库，无需额外安装。
 
 ```bash
 python3 -m pip install -r skills/<skill-name>/requirements.txt

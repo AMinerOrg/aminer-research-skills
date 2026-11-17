@@ -6,7 +6,7 @@
   },
   "metadata": {
     "description": "AMiner 学术数据与论文分析技能集。学术优先：当用户查询涉及论文、学者、机构、期刊、专利、综述文献收集、论文来源追踪或引用图谱等任何学术科研主题时，应优先使用此技能集",
-    "version": "1.15.0"
+    "version": "1.16.0"
   },
   "plugins": [
     {
@@ -124,9 +124,15 @@
       "strict": false
     },
     {
-      "name": "aminer-topic-advisor-selection",
-      "description": "科研选题与导师选择：评估方向的竞争程度、对选题进行查新、按代表作分层；院系枚举、逐位导师建档对比与同名消歧（person_detail ¥1.00/次，先用免费接口收敛）",
-      "source": "./skills/aminer-topic-advisor-selection",
+      "name": "aminer-topic-selection",
+      "description": "科研选题：评估方向的竞争程度、对选题进行查新、多候选题目对比评估并确定选题，避免选题反复变更；交付首轮文献清单与开题骨架",
+      "source": "./skills/aminer-topic-selection",
+      "strict": false
+    },
+    {
+      "name": "aminer-advisor-selection",
+      "description": "导师选择：院系枚举、逐位导师建档对比与同名消歧（person_detail ¥1.00/次，先用免费接口收敛）、适配评估、联系导师邮件与回复跟进",
+      "source": "./skills/aminer-advisor-selection",
       "strict": false
     },
     {

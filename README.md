@@ -3,7 +3,7 @@
   <p>
     <a href="LICENSE"><img alt="License" src="https://img.shields.io/badge/license-MIT-2ea44f"></a>
     <a href=".claude-plugin/marketplace.json"><img alt="Version" src="https://img.shields.io/badge/version-1.15.0-0969da"></a>
-    <a href="SKILLS.md"><img alt="Skills" src="https://img.shields.io/badge/skills-22-0ea5e9"></a>
+    <a href="SKILLS.md"><img alt="Skills" src="https://img.shields.io/badge/skills-23-0ea5e9"></a>
     <a href="INSTALL.md"><img alt="Install" src="https://img.shields.io/badge/install-Claude%20Code%20%7C%20Codex%20%7C%20OpenClaw-111827"></a>
     <a href="README.en.md"><img alt="Language" src="https://img.shields.io/badge/language-中文%20%7C%20English-1f6feb"></a>
   </p>
@@ -29,7 +29,7 @@
 
 ## 在线使用：科研工作流技能
 
-以下 7 个技能可在 AMiner 网页版直接使用，点击右侧按钮即可打开，无需安装；也可以按 [安装指南](INSTALL.md) 装到本地 Agent。
+以下 8 个技能可在 AMiner 网页版直接使用，点击右侧按钮即可打开，无需安装；也可以按 [安装指南](INSTALL.md) 装到本地 Agent。
 
 | 技能 | 能做什么 | 在&#8288;线&#8288;使&#8288;用 |
 |---|---|:---:|
@@ -37,7 +37,8 @@
 | **论文精读** | 结构化精读、逐句翻译、复现细节审计，按模糊描述定位论文 | [![在线使用](https://img.shields.io/badge/%E5%9C%A8%E7%BA%BF%E4%BD%BF%E7%94%A8_%E2%86%97-1f6feb?style=for-the-badge)](https://www.aminer.cn/?skill=aminer-paper-deep-reading) |
 | **实验分析与结果撰写** | 排查代码与实验问题，把实验结果写成论文，核实方法出处 | [![在线使用](https://img.shields.io/badge/%E5%9C%A8%E7%BA%BF%E4%BD%BF%E7%94%A8_%E2%86%97-1f6feb?style=for-the-badge)](https://www.aminer.cn/?skill=aminer-experiment-to-paper) |
 | **项目申报** | 提取申报要件，凝练科学问题，分节撰写，模拟专家评审 | [![在线使用](https://img.shields.io/badge/%E5%9C%A8%E7%BA%BF%E4%BD%BF%E7%94%A8_%E2%86%97-1f6feb?style=for-the-badge)](https://www.aminer.cn/?skill=aminer-grant-application) |
-| **科研选题与导师选择** | 评估方向竞争程度与选题查新，梳理院系导师并逐一对比 | [![在线使用](https://img.shields.io/badge/%E5%9C%A8%E7%BA%BF%E4%BD%BF%E7%94%A8_%E2%86%97-1f6feb?style=for-the-badge)](https://www.aminer.cn/?skill=aminer-topic-advisor-selection) |
+| **科研选题** | 评估方向竞争程度与选题查新，对比候选题目并确定选题 | [![在线使用](https://img.shields.io/badge/%E5%9C%A8%E7%BA%BF%E4%BD%BF%E7%94%A8_%E2%86%97-1f6feb?style=for-the-badge)](https://www.aminer.cn/?skill=aminer-topic-selection) |
+| **导师选择** | 梳理院系导师名单，逐一建立档案并对比，撰写联系导师邮件并跟进回复 | [![在线使用](https://img.shields.io/badge/%E5%9C%A8%E7%BA%BF%E4%BD%BF%E7%94%A8_%E2%86%97-1f6feb?style=for-the-badge)](https://www.aminer.cn/?skill=aminer-advisor-selection) |
 | **学位论文全流程** | 开题调研与查新，逐节起草，落实导师与盲审意见，答辩材料 | [![在线使用](https://img.shields.io/badge/%E5%9C%A8%E7%BA%BF%E4%BD%BF%E7%94%A8_%E2%86%97-1f6feb?style=for-the-badge)](https://www.aminer.cn/?skill=aminer-thesis-writing) |
 | **专利与技术情报** | 产业技术调研，现有技术检索，交底书与权利要求起草，审查意见答复 | [![在线使用](https://img.shields.io/badge/%E5%9C%A8%E7%BA%BF%E4%BD%BF%E7%94%A8_%E2%86%97-1f6feb?style=for-the-badge)](https://www.aminer.cn/?skill=aminer-patent-tech-intelligence) |
 

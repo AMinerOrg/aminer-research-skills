@@ -3,7 +3,7 @@
   <p>
     <a href="LICENSE"><img alt="License" src="https://img.shields.io/badge/license-MIT-2ea44f"></a>
     <a href=".claude-plugin/marketplace.json"><img alt="Version" src="https://img.shields.io/badge/version-1.15.0-0969da"></a>
-    <a href="SKILLS.en.md"><img alt="Skills" src="https://img.shields.io/badge/skills-22-0ea5e9"></a>
+    <a href="SKILLS.en.md"><img alt="Skills" src="https://img.shields.io/badge/skills-23-0ea5e9"></a>
     <a href="INSTALL.en.md"><img alt="Install" src="https://img.shields.io/badge/install-Claude%20Code%20%7C%20Codex%20%7C%20OpenClaw-111827"></a>
     <a href="README.md"><img alt="Language" src="https://img.shields.io/badge/language-English%20%7C%20中文-1f6feb"></a>
   </p>
@@ -29,7 +29,7 @@
 
 ## Use online: research workflow skills
 
-The following 7 skills can be used directly in the AMiner web app: click the button on the right to open one, no installation needed. They can also be installed to a local agent, see [Installation Guide](INSTALL.en.md).
+The following 8 skills can be used directly in the AMiner web app: click the button on the right to open one, no installation needed. They can also be installed to a local agent, see [Installation Guide](INSTALL.en.md).
 
 | Skill | What it does | Try&nbsp;online |
 |---|---|:---:|
@@ -37,7 +37,8 @@ The following 7 skills can be used directly in the AMiner web app: click the but
 | **In-depth paper reading** | Close reading, line-by-line translation, reproduction audits | [![Try online](https://img.shields.io/badge/Try_online_%E2%86%97-1f6feb?style=for-the-badge)](https://www.aminer.cn/?skill=aminer-paper-deep-reading) |
 | **Experiment analysis and results writing** | Debug experiments, write up results, verify methods | [![Try online](https://img.shields.io/badge/Try_online_%E2%86%97-1f6feb?style=for-the-badge)](https://www.aminer.cn/?skill=aminer-experiment-to-paper) |
 | **Grant proposal writing** | Parse the call, frame the question, draft, mock review | [![Try online](https://img.shields.io/badge/Try_online_%E2%86%97-1f6feb?style=for-the-badge)](https://www.aminer.cn/?skill=aminer-grant-application) |
-| **Topic and advisor selection** | Assess topic novelty; compare a department’s advisors | [![Try online](https://img.shields.io/badge/Try_online_%E2%86%97-1f6feb?style=for-the-badge)](https://www.aminer.cn/?skill=aminer-topic-advisor-selection) |
+| **Topic selection** | Assess competition and novelty; compare topics and settle on one | [![Try online](https://img.shields.io/badge/Try_online_%E2%86%97-1f6feb?style=for-the-badge)](https://www.aminer.cn/?skill=aminer-topic-selection) |
+| **Advisor selection** | Enumerate a department's advisors, build profiles, compare, draft contact emails | [![Try online](https://img.shields.io/badge/Try_online_%E2%86%97-1f6feb?style=for-the-badge)](https://www.aminer.cn/?skill=aminer-advisor-selection) |
 | **Thesis: proposal to defense** | Proposal novelty check, chapter drafting, defense prep | [![Try online](https://img.shields.io/badge/Try_online_%E2%86%97-1f6feb?style=for-the-badge)](https://www.aminer.cn/?skill=aminer-thesis-writing) |
 | **Patents and technology intelligence** | Tech surveys, prior-art search, claims, OA replies | [![Try online](https://img.shields.io/badge/Try_online_%E2%86%97-1f6feb?style=for-the-badge)](https://www.aminer.cn/?skill=aminer-patent-tech-intelligence) |
 
