@@ -5,7 +5,8 @@ Checks: frontmatter `name` == directory name (SKILL.md and SKILL.zh.md); every s
 marketplace.json entry with source ./skills/<name>; every skill is listed in SKILLS.md and
 SKILLS.en.md; the skills badge in README.md / README.en.md shows the right count.
 
-Usage: python3 tools/check_skills.py   (exit code 1 on any mismatch)
+Usage: python3 tools/check_skills.py [REPO_ROOT]   (exit code 1 on any mismatch)
+REPO_ROOT defaults to the repository containing this script.
 """
 import json
 import re
@@ -13,7 +14,7 @@ import subprocess
 import sys
 from pathlib import Path
 
-ROOT = Path(__file__).resolve().parent.parent
+ROOT = Path(sys.argv[1]).resolve() if len(sys.argv) > 1 else Path(__file__).resolve().parent.parent
 
 
 def git_ignored(path: Path) -> bool:

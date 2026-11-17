@@ -1,0 +1,38 @@
+# Static checks for pull requests. They read repository files only and never run skill code.
+# The checker itself is taken from main, so a pull request cannot change the rules it is checked against.
+name: Check
+
+on:
+  pull_request:
+  push:
+    branches: [main]
+
+permissions:
+  contents: read
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Skill registry consistency (checker from main)
+        run: |
+          git fetch --no-tags --depth=1 "https://github.com/${GITHUB_REPOSITORY}.git" main
+          git show FETCH_HEAD:tools/check_skills.py > "$RUNNER_TEMP/check_skills.py"
+          python3 -I "$RUNNER_TEMP/check_skills.py" "$GITHUB_WORKSPACE"
+      - name: Conventional Commits PR title
+        if: github.event_name == 'pull_request'
+        env:
+          TITLE: ${{ github.event.pull_request.title }}
+        run: |
+          if printf '%s' "$TITLE" | grep -qE '^(feat|fix|docs|refactor|perf|test|chore|ci|build|style|revert)(\([A-Za-z0-9._/-]+\))?!?: [^ ]'; then
+            echo "PR title OK: $TITLE"
+          else
+            echo "::error::PR title must follow Conventional Commits, e.g. 'feat(skill-name): add X' or 'docs: fix typo'. Got: $TITLE"
+            exit 1
+          fi
