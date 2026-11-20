@@ -8,6 +8,14 @@
     <a href="README.en.md"><img alt="Language" src="https://img.shields.io/badge/language-中文%20%7C%20English-1f6feb"></a>
   </p>
   <p>
+    <a href="https://x.com/AMiner_Research"><img alt="X" src="https://img.shields.io/badge/X-%40AMiner__Research-000000?logo=x&logoColor=white"></a>
+    <a href="https://bsky.app/profile/aminerzp.bsky.social"><img alt="Bluesky" src="https://img.shields.io/badge/Bluesky-%40aminerzp.bsky.social-0285FF?logo=bluesky&logoColor=white"></a>
+    <a href="assets/wechat-official-account-qrcode.png"><img alt="微信公众号" src="https://img.shields.io/badge/微信-公众号-07C160?logo=wechat&logoColor=white"></a>
+    <a href="assets/wechat-service-account-qrcode.png"><img alt="微信服务号" src="https://img.shields.io/badge/微信-服务号-07C160?logo=wechat&logoColor=white"></a>
+    <a href="https://www.xiaohongshu.com/user/profile/62947ab80000000021029ebf"><img alt="小红书" src="https://img.shields.io/badge/小红书-AMiner--科研搭子-FF2442?logo=xiaohongshu&logoColor=white"></a>
+    <a href="https://www.weibo.com/u/1870858943"><img alt="微博" src="https://img.shields.io/badge/微博-AMiner学术头条-E6162D?logo=sinaweibo&logoColor=white"></a>
+  </p>
+  <p>
     <a href="https://www.aminer.cn/">在线网站</a>
     · <a href="#在线使用科研工作流技能">在线使用</a>
     · <a href="SKILLS.md">技能目录</a>
